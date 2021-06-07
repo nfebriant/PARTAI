@@ -5,6 +5,7 @@
  */
 package DAO;
 
+import Koneksi.KoneksiDB;
 import Model.ModPartai;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -18,7 +19,7 @@ import java.util.List;
  *
  * @author nanan
  */
-public class DAOPartai {
+public class DAOPartai implements ImplementPartai{
     Connection connection;
     final String insert = "INSERT INTO partai(Komoditas, Daerah, Harga) VALUES (?, ?, ?)";
     final String delete = "DELETE FROM partai WHERE no=?";
