@@ -7,7 +7,7 @@ package Koneksi;
 
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
-import java.sql.SQLExceptionmport java.util.logging.Level;
+import java.sql.SQLExceptionmport.java.util.logging.Level;
 import java.util.logging.Logger;
 /**
  *
