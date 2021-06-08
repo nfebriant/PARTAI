@@ -5,6 +5,7 @@
  */
 package DAO;
 
+
 import Koneksi.KoneksiDB;
 import Model.ModPartai;
 import java.sql.Connection;
@@ -132,7 +133,7 @@ public class DAOPartai implements ImplementPartai{
         try{
             lmp = new ArrayList<ModPartai>();
             PreparedStatement st = connection.prepareStatement(cariDaerah);
-            st.setString(1, "%" + daerah + "%");
+            st.setString(2, "%" + daerah + "%");
             ResultSet rs = st.executeQuery();
             while (rs.next()){
                 ModPartai mp = new ModPartai();
