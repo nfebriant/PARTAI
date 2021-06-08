@@ -7,7 +7,8 @@ package Koneksi;
 
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
-import java.sql.SQLException;
+import java.sql.SQLExceptionmport java.util.logging.Level;
+import java.util.logging.Logger;
 /**
  *
  * @author D
@@ -15,7 +16,7 @@ import java.sql.SQLException;
 public class KoneksiDB {
     static Connection con;
     
-    public static Connection connection(){
+    public static Connection Connection(){
         if (con == null){
             MysqlDataSource data = new MysqlDataSource();
             data.setPort(8899);
@@ -26,7 +27,7 @@ public class KoneksiDB {
             try {
                 con = (Connection) data.getConnection();
             } catch (SQLException ex){
-//                logger.getLogger(Koneksi108.Class.getKomoditas()).log(level.SEVERE, null, ex);
+            Logger.getLogger(KoneksiDB.class.getName()).log(Level.SEVERE, null,ex);
                 ex.printStackTrace();
             }
         }
