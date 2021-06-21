@@ -22,7 +22,7 @@ import java.util.List;
  */
 public class DAOPartai implements ImplementPartai{
     Connection connection;
-    final String insert = "INSERT INTO partai(Komoditas, Daerah, Harga) VALUES (?, ?, ?, ?)";
+    final String insert = "INSERT INTO partai(Komoditas, Daerah, Harga) VALUES (?, ?, ?)";
     final String delete = "DELETE FROM partai WHERE no=?";
     final String update = "UPDATE partai set Komoditas=?, Daerah=?, Harga=? WHERE No=?";
     final String select = "SELECT * FROM partai";
